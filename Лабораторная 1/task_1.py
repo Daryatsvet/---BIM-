@@ -1,12 +1,13 @@
 # TODO Написать 3 класса с документацией и аннотацией типов
 from abc import ABC, abstractmethod
+class HeatingSystem(ABC):
+    """
+    Класс системы отопления.
 
-"""
     Атрибуты:
         power (float): Мощность системы отопления в киловаттах (кВт).
         energy_source (str): Источник энергии (газ, электричество, твердое топливо).
     """
-
     def __init__(self, power: float, energy_source: str):
         if power <= 0:
             raise ValueError("Мощность должна быть положительным числом.")
